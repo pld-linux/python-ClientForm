@@ -1,7 +1,7 @@
 %define 	module ClientForm
 
-Summary:	Python package providing a module for handling HTML forms (on the client side)
-Summary(pl):	Pakiet zawieraj±cy modu³ obs³ugi formularzy HTML (po stronie klienta)
+Summary:	Python module for handling HTML forms (on the client side)
+Summary(pl):	Modu³ Pythona do obs³ugi formularzy HTML (po stronie klienta)
 Name:		python-%{module}
 Version:	0.1.15
 Release:	0.1
@@ -24,7 +24,7 @@ interface is not the same.
 %description -l pl
 ClientForm to modu³ Pythona obs³uguj±cy formularze HTML po stronie
 klienta. Przydatny do przetwarzania tych¿e, wype³niania i odsy³ania do
-serwera. Zosta³ stworzony na wzór Perlowego modu³u HTML::Form
+serwera. Zosta³ stworzony na wzór perlowego modu³u HTML::Form
 napisanego przez Gislea Aasa, pochodz±cego z biblioteki libwww-perl,
 ale jego interfejs (API) jest inny.
 
@@ -41,14 +41,12 @@ python setup.py install \
 	--root=$RPM_BUILD_ROOT \
 	--optimize=2
 
-rm $RPM_BUILD_ROOT/%{py_sitescriptdir}/*.py
+rm $RPM_BUILD_ROOT%{py_sitescriptdir}/*.py
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-
+%doc COPYING ChangeLog GeneralFAQ.html INSTALL README.html
 %{py_sitescriptdir}/*.py[co]
-
-%doc ChangeLog COPYING GeneralFAQ.html INSTALL README.html README.txt
