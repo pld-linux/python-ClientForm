@@ -3,12 +3,12 @@
 Summary:	Python module for handling HTML forms (on the client side)
 Summary(pl):	Modu³ Pythona do obs³ugi formularzy HTML (po stronie klienta)
 Name:		python-%{module}
-Version:	0.1.15
+Version:	0.1.16
 Release:	0.1
 License:	BSD
 Group:		Development/Languages/Python
 Source0:	http://wwwsearch.sourceforge.net/%{module}/src/%{module}-%{version}.tar.gz
-# Source0-md5:	70e4157d8ee0635b511f3283f47bce63
+# Source0-md5:	b9b18a365ff9625b413fa62cdae75e84
 URL:		http://wwwsearch.sourceforge.net/ClientForm/
 Requires:	python-modules >= 2.1
 BuildArch:	noarch
