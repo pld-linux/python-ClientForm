@@ -10,7 +10,7 @@ Group:		Development/Languages/Python
 Source0:	http://wwwsearch.sourceforge.net/%{module}/src/%{module}-%{version}.tar.gz
 # Source0-md5:	70e4157d8ee0635b511f3283f47bce63
 URL:		http://wwwsearch.sourceforge.net/ClientForm/
-Requires:       python-modules >= 2.1
+Requires:	python-modules >= 2.1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
