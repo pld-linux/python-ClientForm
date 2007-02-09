@@ -3,12 +3,12 @@
 Summary:	Python module for handling HTML forms (on the client side)
 Summary(pl):	Modu³ Pythona do obs³ugi formularzy HTML (po stronie klienta)
 Name:		python-%{module}
-Version:	0.1.16
-Release:	0.1
+Version:	0.2.6
+Release:	1
 License:	BSD
 Group:		Development/Languages/Python
 Source0:	http://wwwsearch.sourceforge.net/%{module}/src/%{module}-%{version}.tar.gz
-# Source0-md5:	b9b18a365ff9625b413fa62cdae75e84
+# Source0-md5:	24173e5aee32027f77f688f9e78eaafa
 URL:		http://wwwsearch.sourceforge.net/ClientForm/
 Requires:	python-modules >= 2.1
 BuildArch:	noarch
@@ -41,12 +41,14 @@ python setup.py install \
 	--root=$RPM_BUILD_ROOT \
 	--optimize=2
 
-rm $RPM_BUILD_ROOT%{py_sitescriptdir}/*.py
+%py_postclean %{_datadir}/%{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog GeneralFAQ.html INSTALL README.html
+%doc COPYING.txt ChangeLog.txt GeneralFAQ.html README.html
 %{py_sitescriptdir}/*.py[co]
+#%dir %{py_sitescriptdir}/ClientForm-%{version}-py2.5.egg-info
+#%{py_sitescriptdir}/ClientForm-%{version}-py2.5.egg-info/*
