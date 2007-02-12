@@ -1,7 +1,7 @@
 %define 	module	ClientForm
 
 Summary:	Python module for handling HTML forms (on the client side)
-Summary(pl):	Modu≥ Pythona do obs≥ugi formularzy HTML (po stronie klienta)
+Summary(pl.UTF-8):   Modu≈Ç Pythona do obs≈Çugi formularzy HTML (po stronie klienta)
 Name:		python-%{module}
 Version:	0.2.6
 Release:	1
@@ -21,11 +21,11 @@ completed forms to the server. It developed from a port of Gisle Aas'
 Perl module HTML::Form, from the libwww-perl library, but the
 interface is not the same.
 
-%description -l pl
-ClientForm to modu≥ Pythona obs≥uguj±cy formularze HTML po stronie
-klienta. Przydatny do przetwarzania tychøe, wype≥niania i odsy≥ania do
-serwera. Zosta≥ stworzony na wzÛr perlowego modu≥u HTML::Form
-napisanego przez Gislea Aasa, pochodz±cego z biblioteki libwww-perl,
+%description -l pl.UTF-8
+ClientForm to modu≈Ç Pythona obs≈ÇugujƒÖcy formularze HTML po stronie
+klienta. Przydatny do przetwarzania tych≈ºe, wype≈Çniania i odsy≈Çania do
+serwera. Zosta≈Ç stworzony na wz√≥r perlowego modu≈Çu HTML::Form
+napisanego przez Gislea Aasa, pochodzƒÖcego z biblioteki libwww-perl,
 ale jego interfejs (API) jest inny.
 
 %prep
