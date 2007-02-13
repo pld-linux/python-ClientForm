@@ -1,7 +1,7 @@
 %define 	module	ClientForm
 
 Summary:	Python module for handling HTML forms (on the client side)
-Summary(pl.UTF-8):   Moduł Pythona do obsługi formularzy HTML (po stronie klienta)
+Summary(pl.UTF-8):	Moduł Pythona do obsługi formularzy HTML (po stronie klienta)
 Name:		python-%{module}
 Version:	0.2.6
 Release:	1
