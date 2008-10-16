@@ -1,5 +1,4 @@
 %define 	module	ClientForm
-
 Summary:	Python module for handling HTML forms (on the client side)
 Summary(pl.UTF-8):	Moduł Pythona do obsługi formularzy HTML (po stronie klienta)
 Name:		python-%{module}
@@ -32,12 +31,11 @@ ale jego interfejs (API) jest inny.
 %setup -q -n %{module}-%{version}
 
 %build
-python setup.py build
+%{__python} setup.py build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
-python setup.py install \
+%{__python} setup.py install \
 	--root=$RPM_BUILD_ROOT \
 	--optimize=2
 
@@ -50,5 +48,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc COPYING.txt ChangeLog.txt GeneralFAQ.html README.html
 %{py_sitescriptdir}/*.py[co]
-#%dir %{py_sitescriptdir}/ClientForm-%{version}-py2.5.egg-info
-#%{py_sitescriptdir}/ClientForm-%{version}-py2.5.egg-info/*
+%if "%{py_ver}" > "2.4"
+%{py_sitescriptdir}/ClientForm-*.egg-info
+%endif
