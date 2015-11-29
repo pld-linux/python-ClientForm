@@ -9,6 +9,7 @@ Group:		Development/Languages/Python
 Source0:	http://wwwsearch.sourceforge.net/%{module}/src/%{module}-%{version}.tar.gz
 # Source0-md5:	832c0ca78674f9263d1fc5fab8756e66
 URL:		http://wwwsearch.sourceforge.net/ClientForm/
+BuildRequires:	rpmbuild(macros) >= 1.710
 Requires:	python-modules >= 2.1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
